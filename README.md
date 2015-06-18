@@ -1,8 +1,8 @@
-Sails Generator for a Seeds.js API Server.
+Sails Generator for a Seeds.js Ember Frontend.
 =====
 
 [![Join the chat at https://gitter.im/terminalvelocity/seeds.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/terminalvelocity/seeds.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Stories in Ready](https://badge.waffle.io/terminalvelocity/seeds.js.png?label=ready&title=Ready)](https://waffle.io/terminalvelocity/seeds.js) ![Downloads on NPM](http://img.shields.io/npm/dm/sails-generate-seeds-backend.svg?style=flat-square)
+[![Stories in Ready](https://badge.waffle.io/terminalvelocity/seeds.js.png?label=ready&title=Ready)](https://waffle.io/terminalvelocity/seeds.js) ![Downloads on NPM](http://img.shields.io/npm/dm/sails-generate-seeds-frontend.svg?style=flat-square)
 
 Seeds is an acronym that stands for **S**ails **E**mber **E**mber-**D**ata **S**emantic-UI. It is designed for Rapid Application Prototyping.
 
@@ -54,7 +54,7 @@ Seeds is an acronym that stands for **S**ails **E**mber **E**mber-**D**ata **S**
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Installation
-`npm install -g sails-generate-seeds-backend`
+`npm install -g sails-generate-seeds-frontend`
 
 ## Usage
 
@@ -64,7 +64,7 @@ This is used automatically by the `seeds new <app-name>` command. You won't have
 
 ### [Stand-Alone] Generates a new Sails app, ready to work with Seeds.js
 ```
-$ sails generate seeds-backend
+$ sails generate seeds-frontend
 ```
 
 ### Install Dependencies
@@ -79,9 +79,9 @@ $ sails lift
 
 ### Visit the server
 ```
-http://localhost:1776/
+http://localhost:4200/
 ```
 
-You should see `Your Seeds have Sails!`
+You should see `Welcome to Seeds.js!`
 
 ![](screenshot.png)
