@@ -41,7 +41,7 @@ Seeds is an acronym that stands for **S**ails **E**mber **E**mber-**D**ata **S**
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**seeds-generate-frontend**
+**sails-generate-seeds-frontend**
 
 - [Installation](#installation)
 - [Usage](#usage)
