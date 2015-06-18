@@ -1,0 +1,61 @@
+{
+  "name": "seeds-generate-frontend",
+  "version": "1.1.0",
+  "description": "Generate a Seeds frontend.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha test/",
+    "watch": "mocha -w test/",
+    "lint": "eslint -c .eslintrc lib/",
+    "lint-staged": "git diff --diff-filter=ACMRTUXB --cached --name-only | grep '.*\\.js$' | grep -v 'node_modules' | grep -v 'test' | xargs eslint -c .eslintrc --ext .js --ext .js",
+    "doctoc": "doctoc README.md --title '**seeds-generate-frontend**' && if [ -f CONTRIBUTING.md ]; then doctoc CONTRIBUTING.md; fi && if [[ $(git diff --shortstat -- README.md 2> /dev/null | tail -n1) != '' || $(git diff --shortstat -- CONTRIBUTING.md 2> /dev/null | tail -n1) != '' ]]; then git add README.md CONTRIBUTING.md && git commit --no-verify -m'table of contents update'; fi",
+    "requireGitClean": "/bin/bash -c 'source ./scripts.sh && git_require_clean_work_tree'",
+    "gitPull": "git pull --rebase origin master",
+    "gitPush": "git push --follow-tags --no-verify && git push --tags --no-verify",
+    "release": "f () { source ./scripts.sh && npm run requireGitClean && npm run gitPull && npm run doctoc && npm run lint && npm test && npm_release public $@; }; f"
+  },
+  "keywords": [
+    "frontend",
+    "generator",
+    "sails",
+    "generate",
+    "plugin",
+    "seeds",
+    "ember"
+  ],
+  "homepage": "https://github.com/terminalvelocity/seeds-generate-frontend",
+  "author": "jhliberty",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:terminalvelocity/seeds-generate-frontend.git"
+  },
+  "config": {
+    "notes": "important to correct the path of npm so that the git hook doesn't error",
+    "ghooks": {
+      "pre-commit": "PATH=$PATH:/usr/local/bin:/usr/local/sbin && npm run lint-staged",
+      "pre-push": "PATH=$PATH:/usr/local/bin:/usr/local/sbin && npm run dmn && npm run doctoc && npm run lint && npm test",
+      "update": "PATH=$PATH:/usr/local/bin:/usr/local/sbin && npm install"
+    }
+  },
+  "dependencies": {
+    "lodash": ">=2.4.x",
+    "merge-defaults": ">=0.1.0"
+  },
+  "devDependencies": {
+    "sails-generate": "*",
+    "reportback": "*",
+    "fs-extra": "*",
+    "chai": "^2.3.0",
+    "dmn": "^1.0.10",
+    "doctoc": "^0.13.0",
+    "eslint": "^0.22.1",
+    "ghooks": "^0.3.2",
+    "mocha": "^2.2.5"
+  },
+  "sailsGenerator": {
+    "type": "frontend",
+    "behavior": "adds `sails generate seeds-frontend`",
+    "sailsVersion": "~0.11.0"
+  }
+}
