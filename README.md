@@ -74,7 +74,7 @@ $ npm install
 
 ### Start the server
 ```
-$ sails lift
+$ ember serve
 ```
 
 ### Visit the server
