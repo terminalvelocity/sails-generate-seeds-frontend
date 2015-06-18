@@ -1,5 +1,5 @@
 {
-  "name": "seeds-generate-frontend",
+  "name": "sails-generate-seeds-frontend",
   "version": "1.1.2",
   "description": "Generate a Seeds frontend.",
   "main": "lib/index.js",
@@ -8,7 +8,7 @@
     "watch": "mocha -w test/",
     "lint": "eslint -c .eslintrc lib/",
     "lint-staged": "git diff --diff-filter=ACMRTUXB --cached --name-only | grep '.*\\.js$' | grep -v 'node_modules' | grep -v 'test' | xargs eslint -c .eslintrc --ext .js --ext .js",
-    "doctoc": "doctoc README.md --title '**seeds-generate-frontend**' && if [ -f CONTRIBUTING.md ]; then doctoc CONTRIBUTING.md; fi && if [[ $(git diff --shortstat -- README.md 2> /dev/null | tail -n1) != '' || $(git diff --shortstat -- CONTRIBUTING.md 2> /dev/null | tail -n1) != '' ]]; then git add README.md CONTRIBUTING.md && git commit --no-verify -m'table of contents update'; fi",
+    "doctoc": "doctoc README.md --title '**sails-generate-seeds-frontend**' && if [ -f CONTRIBUTING.md ]; then doctoc CONTRIBUTING.md; fi && if [[ $(git diff --shortstat -- README.md 2> /dev/null | tail -n1) != '' || $(git diff --shortstat -- CONTRIBUTING.md 2> /dev/null | tail -n1) != '' ]]; then git add README.md CONTRIBUTING.md && git commit --no-verify -m'table of contents update'; fi",
     "requireGitClean": "/bin/bash -c 'source ./scripts.sh && git_require_clean_work_tree'",
     "gitPull": "git pull --rebase origin master",
     "gitPush": "git push --follow-tags --no-verify && git push --tags --no-verify",
@@ -23,12 +23,12 @@
     "seeds",
     "ember"
   ],
-  "homepage": "https://github.com/terminalvelocity/seeds-generate-frontend",
+  "homepage": "https://github.com/terminalvelocity/sails-generate-seeds-frontend",
   "author": "jhliberty",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:terminalvelocity/seeds-generate-frontend.git"
+    "url": "git@github.com:terminalvelocity/sails-generate-seeds-frontend.git"
   },
   "config": {
     "notes": "important to correct the path of npm so that the git hook doesn't error",
