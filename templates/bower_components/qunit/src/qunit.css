@@ -116,7 +116,13 @@
 
 #qunit-tests.hidepass li.running,
 #qunit-tests.hidepass li.pass {
-	display: none;
+	visibility: hidden;
+	position: absolute;
+	width:   0;
+	height:  0;
+	padding: 0;
+	border:  0;
+	margin:  0;
 }
 
 #qunit-tests li strong {
@@ -131,6 +137,11 @@
 	padding: 0.5em;
 	color: #C2CCD1;
 	text-decoration: none;
+}
+
+#qunit-tests li p a {
+	padding: 0.25em;
+	color: #6B6464;
 }
 #qunit-tests li a:hover,
 #qunit-tests li a:focus {
@@ -149,6 +160,10 @@
 	background-color: #FFF;
 
 	border-radius: 5px;
+}
+
+.qunit-source {
+	margin: 0.6em 0 0.3em;
 }
 
 .qunit-collapsed {

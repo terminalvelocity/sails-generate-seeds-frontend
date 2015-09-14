@@ -4,8 +4,8 @@
     "app-shims.js",
     "test-shims.js"
   ],
-  "version": "0.0.3",
-  "homepage": "https://github.com/stefanpenner/ember-cli-shims",
+  "version": "0.0.5",
+  "homepage": "https://github.com/ember-cli/ember-cli-shims",
   "authors": [
     "Stefan Penner <stefan.penner@gmail.com>",
     "Manuel Wiedenmann <manuel@funkensturm.de>"
@@ -18,6 +18,6 @@
     "tests"
   ],
   "dependencies": {
-    "ember": ">=1.4 <2"
+    "ember": ">=1.4"
   }
 }

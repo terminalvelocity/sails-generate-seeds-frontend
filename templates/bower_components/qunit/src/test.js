@@ -70,9 +70,11 @@ Test.prototype = {
 
 		config.current = this;
 
+		if ( this.module.testEnvironment ) {
+			delete this.module.testEnvironment.beforeEach;
+			delete this.module.testEnvironment.afterEach;
+		}
 		this.testEnvironment = extend( {}, this.module.testEnvironment );
-		delete this.testEnvironment.beforeEach;
-		delete this.testEnvironment.afterEach;
 
 		this.started = now();
 		runLoggingCallbacks( "testStart", {
@@ -202,6 +204,9 @@ Test.prototype = {
 			assertions: this.assertions,
 			testId: this.testId,
 
+			// Source of Test
+			source: this.stack,
+
 			// DEPRECATED: this property will be removed in 2.0.0, use runtime instead
 			duration: this.runtime
 		});
@@ -259,7 +264,7 @@ Test.prototype = {
 		}
 	},
 
-	push: function( result, actual, expected, message ) {
+	push: function( result, actual, expected, message, negative ) {
 		var source,
 			details = {
 				module: this.module.name,
@@ -269,6 +274,7 @@ Test.prototype = {
 				actual: actual,
 				expected: expected,
 				testId: this.testId,
+				negative: negative || false,
 				runtime: now() - this.started
 			};
 
@@ -289,7 +295,7 @@ Test.prototype = {
 	},
 
 	pushFailure: function( message, source, actual ) {
-		if ( !this instanceof Test ) {
+		if ( !( this instanceof Test ) ) {
 			throw new Error( "pushFailure() assertion outside test context, was " +
 				sourceFromStacktrace( 2 ) );
 		}
@@ -325,7 +331,7 @@ Test.prototype = {
 				QUnit.stop();
 				then.call(
 					promise,
-					QUnit.start,
+					function() { QUnit.start(); },
 					function( error ) {
 						message = "Promise rejected " +
 							( !phase ? "during" : phase.replace( /Each$/, "" ) ) +
@@ -345,7 +351,7 @@ Test.prototype = {
 
 	valid: function() {
 		var include,
-			filter = config.filter,
+			filter = config.filter && config.filter.toLowerCase(),
 			module = QUnit.urlParams.module && QUnit.urlParams.module.toLowerCase(),
 			fullName = ( this.module.name + ": " + this.testName ).toLowerCase();
 
@@ -368,7 +374,7 @@ Test.prototype = {
 
 		include = filter.charAt( 0 ) !== "!";
 		if ( !include ) {
-			filter = filter.toLowerCase().slice( 1 );
+			filter = filter.slice( 1 );
 		}
 
 		// If the filter matches, we need to honour include
@@ -392,7 +398,7 @@ QUnit.reset = function() {
 
 	// Return on non-browser environments
 	// This is necessary to not break on node tests
-	if ( typeof window === "undefined" ) {
+	if ( !defined.document ) {
 		return;
 	}
 
@@ -438,4 +444,92 @@ function generateHash( module, testName ) {
 	}
 
 	return hex.slice( -8 );
+}
+
+function synchronize( callback, last ) {
+	if ( QUnit.objectType( callback ) === "array" ) {
+		while ( callback.length ) {
+			synchronize( callback.shift() );
+		}
+		return;
+	}
+	config.queue.push( callback );
+
+	if ( config.autorun && !config.blocking ) {
+		process( last );
+	}
+}
+
+function saveGlobal() {
+	config.pollution = [];
+
+	if ( config.noglobals ) {
+		for ( var key in global ) {
+			if ( hasOwn.call( global, key ) ) {
+
+				// in Opera sometimes DOM element ids show up here, ignore them
+				if ( /^qunit-test-output/.test( key ) ) {
+					continue;
+				}
+				config.pollution.push( key );
+			}
+		}
+	}
+}
+
+function checkPollution() {
+	var newGlobals,
+		deletedGlobals,
+		old = config.pollution;
+
+	saveGlobal();
+
+	newGlobals = diff( config.pollution, old );
+	if ( newGlobals.length > 0 ) {
+		QUnit.pushFailure( "Introduced global variable(s): " + newGlobals.join( ", " ) );
+	}
+
+	deletedGlobals = diff( old, config.pollution );
+	if ( deletedGlobals.length > 0 ) {
+		QUnit.pushFailure( "Deleted global variable(s): " + deletedGlobals.join( ", " ) );
+	}
+}
+
+// Will be exposed as QUnit.asyncTest
+function asyncTest( testName, expected, callback ) {
+	if ( arguments.length === 2 ) {
+		callback = expected;
+		expected = null;
+	}
+
+	QUnit.test( testName, expected, callback, true );
+}
+
+// Will be exposed as QUnit.test
+function test( testName, expected, callback, async ) {
+	var newTest;
+
+	if ( arguments.length === 2 ) {
+		callback = expected;
+		expected = null;
+	}
+
+	newTest = new Test({
+		testName: testName,
+		expected: expected,
+		async: async,
+		callback: callback
+	});
+
+	newTest.queue();
+}
+
+// Will be exposed as QUnit.skip
+function skip( testName ) {
+	var test = new Test({
+		testName: testName,
+		skip: true
+	});
+
+	test.queue();
 }

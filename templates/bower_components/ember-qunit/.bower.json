@@ -1,6 +1,6 @@
 {
   "name": "ember-qunit",
-  "version": "0.3.3",
+  "version": "0.4.10",
   "main": "ember-qunit.js",
   "authors": [
     "Stefan Penner",
@@ -13,13 +13,13 @@
   "dependencies": {},
   "devDependencies": {},
   "homepage": "https://github.com/rwjblue/ember-qunit-builds",
-  "_release": "0.3.3",
+  "_release": "0.4.10",
   "_resolution": {
     "type": "version",
-    "tag": "v0.3.3",
-    "commit": "53747709bdbba4bd9980e8f60782c11f51d8442f"
+    "tag": "v0.4.10",
+    "commit": "7eac205272b6392d557cae812de1f445e8f3de1a"
   },
   "_source": "git://github.com/rwjblue/ember-qunit-builds.git",
-  "_target": "0.3.3",
+  "_target": "0.4.10",
   "_originalSource": "ember-qunit"
 }

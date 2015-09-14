@@ -2,7 +2,7 @@
 // http://flesler.blogspot.com/2008/05/jsdump-pretty-dump-of-any-javascript.html
 QUnit.dump = (function() {
 	function quote( str ) {
-		return "\"" + str.toString().replace( /"/g, "\\\"" ) + "\"";
+		return "\"" + str.toString().replace( /\\/g, "\\\\" ).replace( /"/g, "\\\"" ) + "\"";
 	}
 	function literal( o ) {
 		return o + "";
@@ -127,7 +127,7 @@ QUnit.dump = (function() {
 			join: join,
 			//
 			depth: 1,
-			maxDepth: 5,
+			maxDepth: QUnit.config.maxDepth,
 
 			// This is the list of parsers, to modify them, use dump.setParser
 			parsers: {
@@ -174,7 +174,7 @@ QUnit.dump = (function() {
 					nonEnumerableProperties = [ "message", "name" ];
 					for ( i in nonEnumerableProperties ) {
 						key = nonEnumerableProperties[ i ];
-						if ( key in map && !( key in keys ) ) {
+						if ( key in map && inArray( key, keys ) < 0 ) {
 							keys.push( key );
 						}
 					}
