@@ -2,7 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Mixin.create({
   deactivate() {
-    this.currentModel.get('isNew') ? this.currentModel.deleteRecord() : this.currentModel.rollback();
+    if (this.currentModel.get('isNew')) {
+      this.currentModel.deleteRecord();
+    } else {
+      this.currentModel.rollback();
+    }
   },
   actions: {
     save() {
