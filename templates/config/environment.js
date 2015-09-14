@@ -17,7 +17,7 @@ module.exports = function(environment) {
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
       'font-src': "'self' https://fonts.gstatic.com data:",
       'connect-src': "'self' http://localhost:1776",
-      'img-src': "'self'",
+      'img-src': "'self' http://semantic-ui.com",
       'report-uri':"'localhost'",
       'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
       'frame-src': "'none'"
