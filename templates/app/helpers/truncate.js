@@ -1,8 +1,9 @@
 import Ember from 'ember';
 
-export default Ember.Helper.helper((params, hash) => {
-  const max = hash.max || 140;
+export default Ember.Helper.helper((params) => {
   const str = params[0];
-  let modifiedStr = str.length > max ? `${str.substr(0, max)}...` : str;
+  const limit = params[1] || 140;
+  let modifiedStr = str.length > limit ? `${str.substr(0, limit)}...` : str;
+
   return modifiedStr;
 });
