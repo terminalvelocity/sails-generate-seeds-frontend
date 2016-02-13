@@ -40,6 +40,6 @@
     "ember-export-application-global": "^1.0.4",
     "ember-moment": "3.6.4",
     "ember-resolver": "^2.0.2",
-    "semantic-ui-seeds": "^1.0.1"
+    "semantic-ui-ember": "^0.9.3"
   }
 }
