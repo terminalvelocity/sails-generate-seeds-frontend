@@ -3,25 +3,15 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'frontend',
+    podModulePrefix: 'frontend/routes',
     environment: environment,
     baseURL: '/',
-    apiURL: 'http://localhost:1776',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
-    },
-    contentSecurityPolicy: {
-      'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
-      'font-src': "'self' https://fonts.gstatic.com data:",
-      'connect-src': "'self' http://localhost:1776",
-      'img-src': "'self' http://semantic-ui.com",
-      'report-uri':"'localhost'",
-      'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
-      'frame-src': "'none'"
     },
 
     APP: {
@@ -31,6 +21,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.apiURL = "http://localhost:1776";
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -39,14 +30,10 @@ module.exports = function(environment) {
   }
 
   if (environment === 'test') {
-    // Testem prefers this...
     ENV.baseURL = '/';
     ENV.locationType = 'none';
-
-    // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
-
     ENV.APP.rootElement = '#ember-testing';
   }
 
