@@ -1,4 +1,4 @@
-import { eq } from 'frontend/helpers/eq';
+import { eq } from '<%= appname %>/helpers/eq';
 import { module, test } from 'qunit';
 
 module('Unit | Helper | eq');

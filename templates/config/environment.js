@@ -2,8 +2,8 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'frontend',
-    podModulePrefix: 'frontend/routes',
+    modulePrefix: '<%= appname %>',
+    podModulePrefix: '<%= appname %>/routes',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

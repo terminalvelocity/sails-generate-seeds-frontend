@@ -1,4 +1,4 @@
-import { icon } from 'frontend/helpers/icon';
+import { icon } from '<%= appname %>/helpers/icon';
 import { module, test } from 'qunit';
 
 module('Unit | Helper | icon');

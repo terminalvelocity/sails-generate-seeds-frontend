@@ -1,7 +1,7 @@
 {
-  "name": "frontend",
-  "version": "0.0.0",
-  "description": "Small description for frontend goes here",
+  "name": "<%= appname %>",
+  "version": "1.0.0",
+  "description": "Insert a short description here",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -16,7 +16,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "<%= author %>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
