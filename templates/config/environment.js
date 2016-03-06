@@ -23,7 +23,7 @@ module.exports = function(environment) {
   if (environment === 'development') {
     ENV.apiURL = "http://localhost:1776";
     ENV['ember-devtools'] = { global: true };
-
+    ENV['ember-cli-mirage'] = { enabled: true };
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -32,9 +32,10 @@ module.exports = function(environment) {
   }
 
   if (environment === 'test') {
-    ENV.apiURL = "http://localhost:1776";
     ENV.baseURL = '/';
     ENV.locationType = 'none';
+    ENV.apiURL = "http://localhost:1776";
+    ENV['ember-cli-mirage'] = { enabled: true };
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
     ENV.APP.rootElement = '#ember-testing';
