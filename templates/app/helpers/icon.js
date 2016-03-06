@@ -1,15 +1,19 @@
 import Ember from 'ember';
 
-export default Ember.Helper.helper((params, hash) => {
-  const disabled = hash.disabled ? "disabled" : "";
-  const loading = hash.loading ? "loading" : "";
-  const fitted = hash.fitted ? "fitted" : "";
-  const inverted = hash.inverted ? "inverted" : "";
-  const circular = hash.circular ? "circular" : "";
-  const bordered = hash.bordered ? "bordered" : "";
-  const rotated = hash.rotated ? "rotated" : "";
-  const flipped = hash.flipped ? "flipped" : "";
-  let classes = `${hash.size} ${hash.color} ${loading} ${disabled} ${fitted} ${inverted} ${circular} ${bordered} ${rotated} ${flipped}`;
+export function icon(params, hash={}) {
+  const color = hash.color || undefined;
+  const size = hash.size || undefined;
+  const disabled = hash.disabled ? "disabled" : undefined;
+  const loading = hash.loading ? "loading" : undefined;
+  const fitted = hash.fitted ? "fitted" : undefined;
+  const inverted = hash.inverted ? "inverted" : undefined;
+  const circular = hash.circular ? "circular" : undefined;
+  const bordered = hash.bordered ? "bordered" : undefined;
+  const rotated = hash.rotated ? "rotated" : undefined;
+  const flipped = hash.flipped ? "flipped" : undefined;
+  const classes = [size, color, loading, disabled, fitted, inverted, circular, bordered, rotated, flipped].compact().join(' ');
 
-  return new Ember.Handlebars.SafeString(`<i class="icon ${params[0]} ${classes}"></i>`);
-});
+  return Ember.String.htmlSafe(`<i class='${classes} ${params[0]} icon'></i>`);
+}
+
+export default Ember.Helper.helper(icon);
