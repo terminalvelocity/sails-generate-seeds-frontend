@@ -1,7 +1,0 @@
-{
-  "generators": {
-    "modules": {
-        "seedsfrontend": "/Users/jhliberty/workspace/Seeds-Master/sails-generate-seeds-frontend"
-    }
-  }
-}
