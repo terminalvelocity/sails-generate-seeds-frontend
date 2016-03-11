@@ -1,6 +1,6 @@
 {
   "name": "sails-generate-seeds-frontend",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Generate a Seeds frontend.",
   "main": "lib/index.js",
   "scripts": {
