@@ -1,24 +1,71 @@
-### 0.0.0
-Init
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* [[`6faecc5e2e`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/6faecc5e2e)] - 2.1.4 (John-Henry Liberty)
+* [[`e20fd67654`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/e20fd67654)] - Fix version of seeds scaffold to be compatiable with newer ember model generator (John-Henry Liberty)
+* [[`e852bcbdff`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/e852bcbdff)] - 2.1.3 (John-Henry Liberty)
+* [[`0ee2a77eec`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/0ee2a77eec)] - Locks patch level commit to ember-cli-seeds-scaffold@2.0.5 (John-Henry Liberty)
+* [[`b5b17633e2`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/b5b17633e2)] - 2.1.2 (John-Henry Liberty)
+* [[`809487fee1`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/809487fee1)] - Merge pull request #3 from terminalvelocity/add-save-model-mixin (John-Henry Liberty)
+* [[`739d1225fb`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/739d1225fb)] - Joined route names by '.' to make them valid (Harper Holden)
+* [[`c6d47e2581`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/c6d47e2581)] - Transplanted save-model-mixin from seeds-scaffold to seeds-frontend (Harper Holden)
+* [[`635065c410`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/635065c410)] - 2.1.1 (John-Henry Liberty)
+* [[`66bd9827db`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/66bd9827db)] - add tilde to seeds-scaffold version and bumps to latest (John-Henry Liberty)
+* [[`6578fa8356`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/6578fa8356)] - Delete .sailsrc (John-Henry Liberty)
+* [[`3d8fbb29d4`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/3d8fbb29d4)] - 2.1.0 (John-Henry Liberty)
+* [[`493ec4dc2e`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/493ec4dc2e)] - bump lodash/lodash.merge version (John-Henry Liberty)
+* [[`ebd6c83c9c`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/ebd6c83c9c)] - Converts some files into templates so the app name can be dynamic (John-Henry Liberty)
+* [[`2b32646300`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/2b32646300)] - add dummy to gitignore (John-Henry Liberty)
+* [[`ade08f5975`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/ade08f5975)] - Merge pull request #2 from terminalvelocity/ember-2.4.1 (John-Henry Liberty)
+* [[`11481da68a`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/11481da68a)] - removes unnecessary .gitkeep files. changes site-nav back to teal as per user feedback (John-Henry Liberty)
+* [[`a69b86fa23`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/a69b86fa23)] - renamed contact to example (John-Henry Liberty)
+* [[`9f3c987bfd`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/9f3c987bfd)] - adds ember-cli-mirage (John-Henry Liberty)
+* [[`14eefd83c7`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/14eefd83c7)] - add ember-cli-mirage settings. Enabled by default (John-Henry Liberty)
+* [[`de67292392`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/de67292392)] - Updates to Ember v2.4.1 (John-Henry Liberty)
+* [[`d537d3a384`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/d537d3a384)] - Fresh install of v2.4.0 with pods enabled (John-Henry Liberty)
+* [[`edcd7ba3a9`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/edcd7ba3a9)] - 2.0.14 (John-Henry Liberty)
+* [[`9cfef4d5f8`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/9cfef4d5f8)] - Change index.hbs button to blue from teal (John-Henry Liberty)
+* [[`385acc56a2`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/385acc56a2)] - 2.0.13 (John-Henry Liberty)
+* [[`62559b8a90`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/62559b8a90)] - 2.0.12 (John-Henry Liberty)
+* [[`ddfa29de97`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/ddfa29de97)] - Merge pull request #1 from terminalvelocity/header-footer-components (John-Henry Liberty)
+* [[`47a75641c0`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/47a75641c0)] - Moves footer and nav partials to components. removes views folder and removes video-duration helper (John-Henry Liberty)
+* [[`4a6710c463`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/4a6710c463)] - 2.0.11 (John-Henry Liberty)
+* [[`45d3cf0c26`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/45d3cf0c26)] - Update Seeds helpers (John-Henry Liberty)
+* [[`f09c2a500f`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/f09c2a500f)] - Update screenshot (John-Henry Liberty)
+* [[`ff16b5a883`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/ff16b5a883)] - 2.0.10 (John-Henry Liberty)
+* [[`52df596cd7`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/52df596cd7)] - Adds import config to application adapter (John-Henry Liberty)
+* [[`c2d09c9f00`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/c2d09c9f00)] - 2.0.9 (John-Henry Liberty)
+* [[`04382acc95`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/04382acc95)] - Add config.apiURL to environment and application adapter (John-Henry Liberty)
+* [[`0e59f3ca8a`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/0e59f3ca8a)] - 2.0.8 (John-Henry Liberty)
+* [[`115497718b`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/115497718b)] - Changes const max to limit, moves it from hash to second, optional param (John-Henry Liberty)
+* [[`d5ec5b32b9`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/d5ec5b32b9)] - 2.0.7 (John-Henry Liberty)
+* [[`6fc3d01833`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/6fc3d01833)] - Add truncate helper (John-Henry Liberty)
+* [[`98c5eeb8c9`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/98c5eeb8c9)] - 2.0.6 (John-Henry Liberty)
+* [[`ae48069787`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/ae48069787)] - Missing semicolon in titleize helper (John-Henry Liberty)
+* [[`223ad33847`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/223ad33847)] - 2.0.5 (John-Henry Liberty)
+* [[`6cf5166106`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/6cf5166106)] - update helpers, add titleize helper (John-Henry Liberty)
+* [[`bb2ed9a9f2`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/bb2ed9a9f2)] - 2.0.4 (John-Henry Liberty)
+* [[`df9421d278`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/df9421d278)] - Clean up about template (John-Henry Liberty)
+* [[`5383adc700`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/5383adc700)] - 2.0.3 (John-Henry Liberty)
+* [[`7e3b72fc59`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/7e3b72fc59)] - Ember 2.0 Ready (John-Henry Liberty)
+* [[`48ddd76a51`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/48ddd76a51)] - 2.0.2 (John-Henry Liberty)
+* [[`e4c2b1e81c`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/e4c2b1e81c)] - Updates bower_components to reflect version in bower.json (John-Henry Liberty)
+* [[`11e9b0d3e7`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/11e9b0d3e7)] - 2.0.1 (John-Henry Liberty)
+* [[`d7e164979b`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/d7e164979b)] - Fix warnings fs from ember console (John-Henry Liberty)
+* [[`ca20de5e8e`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/ca20de5e8e)] - 2.0.0 (John-Henry Liberty)
+* [[`f45d74c15d`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/f45d74c15d)] - ***Revert*** "version" (John-Henry Liberty)
+* [[`78cb53d77f`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/78cb53d77f)] - Updates Seeds Frontend to Ember@2.0.2 (John-Henry Liberty)
+* [[`a0253bae4d`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/a0253bae4d)] - 1.1.5 (John-Henry Liberty)
+* [[`ee9b3b75f6`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/ee9b3b75f6)] - adds watchman config to templates (John-Henry Liberty)
+* [[`cc137a5595`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/cc137a5595)] - 1.1.4 (John-Henry Liberty)
+* [[`b3a1ad60a9`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/b3a1ad60a9)] - trying out including modules (John-Henry Liberty)
+* [[`28d3daa7d1`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/28d3daa7d1)] - 1.1.3 (John-Henry Liberty)
+* [[`1586dac81e`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/1586dac81e)] - table of contents update (John-Henry Liberty)
+* [[`163adcba01`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/163adcba01)] - renames package to sails-generate-seeds-frontend (John-Henry Liberty)
+* [[`c8208748cd`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/c8208748cd)] - 1.1.2 (John-Henry Liberty)
+* [[`fb3b662e7d`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/fb3b662e7d)] - 1.1.1 (John-Henry Liberty)
+* [[`f729d21eb8`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/f729d21eb8)] - reset package version (John-Henry Liberty)
+* [[`bd8e634530`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/bd8e634530)] - 1.1.1 (John-Henry Liberty)
+* [[`dcea24f572`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/dcea24f572)] - fix typo in readme (John-Henry Liberty)
+* [[`d5424843ee`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/d5424843ee)] - table of contents update (John-Henry Liberty)
+* [[`13780acd47`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/13780acd47)] - removes dmn script from plugin as it interferes with some of the templates we need to copy over (John-Henry Liberty)
+* [[`9196554778`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/9196554778)] - Prep for release (John-Henry Liberty)
+* [[`2d95cb32a7`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/2d95cb32a7)] - sails-generate-seeds-backend initial commit: Adds templates, npm/git/eslint setup, githooks, etc (John-Henry Liberty)
+* [[`a7dbc28105`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/a7dbc28105)] - **Bugfix**: fixed nav component invocation. {{site-nav}} (John-Henry Liberty)
