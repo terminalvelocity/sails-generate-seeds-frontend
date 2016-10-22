@@ -1,9 +1,7 @@
 module.exports = function(environment) {
   var ENV = {
-    // modulePrefix: '<%= appname %>',
-    // podModulePrefix: '<%= appname %>/routes',
-    modulePrefix: 'dummy',
-    podModulePrefix: 'dummy/routes',
+    modulePrefix: '<%= appname %>',
+    podModulePrefix: '<%= appname %>/routes',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -23,7 +21,7 @@ module.exports = function(environment) {
   if (environment === 'development') {
     ENV.apiURL = 'http://localhost:1776';
     ENV['ember-devtools'] = { global: true };
-    ENV['ember-cli-mirage'] = { enabled: true };
+    ENV['ember-cli-mirage'] = { enabled: false };
   }
 
   if (environment === 'test') {
