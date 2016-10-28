@@ -39,6 +39,7 @@
     }
   },
   "dependencies": {
+    "changelog-maker": "~2.2.3",
     "lodash": "^4.6.1",
     "lodash.defaults": "^4.0.1"
   },
