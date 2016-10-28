@@ -69,3 +69,4 @@
 * [[`9196554778`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/9196554778)] - Prep for release (John-Henry Liberty)
 * [[`2d95cb32a7`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/2d95cb32a7)] - sails-generate-seeds-backend initial commit: Adds templates, npm/git/eslint setup, githooks, etc (John-Henry Liberty)
 * [[`a7dbc28105`](https://github.com/git@github.com:terminalvelocity/sails-generate-seeds-frontend/commit/a7dbc28105)] - **Bugfix**: fixed nav component invocation. {{site-nav}} (John-Henry Liberty)
+
